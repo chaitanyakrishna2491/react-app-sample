@@ -3,12 +3,20 @@ import React, { useState } from 'react'
 function MyFirstComponent(props){
     const [counterValue, setCounterValue] = useState(props.counter)
 
+    function increment(){
+        setCounterValue(counterValue+1)
+    }
+
+    function decrement(){
+        setCounterValue(counterValue-1)
+    }
+
     return (
         <div>
-            Hello {this.props.uname}!!!
+            Hello {props.uname}!!!
             <br/>
-            <input type="button" onClick={setCounterValue(counterValue-1)} value="Increment"></input><br/>
-            <input type="button" onClick={setCounterValue(counterValue+1)} value="Decrement"></input><br/>
+            <input type="button" onClick={increment} value="Increment"></input><br/>
+            <input type="button" onClick={decrement} value="Decrement"></input><br/>
             From myfirstcomp the coounter vale from props {counterValue}
         </div>
     )
