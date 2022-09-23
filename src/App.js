@@ -5,6 +5,7 @@ import './App.css';
 class App extends Component {
   constructor(){
     super()
+    console.log("hi")
     this.state = {
       counter: 0,
       jobStatus: "initiated"
