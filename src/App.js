@@ -13,11 +13,14 @@ class App extends Component {
   
   render() { //lifecycle methods
     return (
+      <div>
       <div className="App">
         <MyFirstComponent uname={"User"} counter={this.state.counter}/>
         <div>
           From App comp Counter: {++this.state.counter}
         </div>
+      </div>
+      <span style={{color:"red", fontSize: "24px"}}>ghgjg</span>
       </div>
     );
   }
