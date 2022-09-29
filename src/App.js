@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import MyFirstComponent from './components/myFirstComponent';
 import './App.css';
 
@@ -14,6 +15,8 @@ class App extends Component {
   render() { //lifecycle methods
     return (
       <div>
+        <Link to='/page1'>Page 1</Link>
+        <Link to='/page2'>Page 2</Link>
       <div className="App">
         <MyFirstComponent uname={"User"} counter={this.state.counter}/>
         <div>
