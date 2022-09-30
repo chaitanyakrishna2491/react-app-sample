@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default MyFirstComponent = function(props){
+export default function Header(props){
 
     return (
         <div>

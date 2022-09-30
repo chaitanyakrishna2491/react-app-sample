@@ -15,8 +15,6 @@ class App extends Component {
   render() { //lifecycle methods
     return (
       <div>
-        <Link to='/page1'>Page 1</Link>
-        <Link to='/page2'>Page 2</Link>
       <div className="App">
         <MyFirstComponent uname={"User"} counter={this.state.counter}/>
         <div>

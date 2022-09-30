@@ -1,0 +1,26 @@
+.pageHeader {
+    height: 75px;
+    width: 100%;
+    border: 1px solid #DDDDDD;
+    background-color: aquamarine;
+}
+.pageSidePanel {
+    min-height: 500px;
+    width: 20%;
+    border: 1px solid blue;
+    display: inline-block;
+    vertical-align: top;
+}
+.pageContainer {
+    display: inline-block;
+    width: 79%;
+    border: 1px solid red;
+    min-height: 500px;
+    vertical-align: top;
+}
+.pageFooter {
+    height: 75px;
+    width: 100%;
+    border: 1px solid #DDDDDD;
+    background-color: aquamarine;
+}

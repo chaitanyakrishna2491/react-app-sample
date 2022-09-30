@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Header from '../components/header'
+import Template1 from '../templates/template1'
+import App from '../App'
 export default function Page1(props){
 
     return (
-        <div>
-            <Link to='/'>Back</Link>
-            <a href="http://localhost:3000/">anchor back</a>
-            This is Page 1
-        </div>
+        <Template1 header={Header}>
+            <App></App>
+        </Template1>
     )
 }
