@@ -1,7 +1,7 @@
 import React, { useState, Component, useEffect } from 'react'
 import axios from 'axios'
 
-function MyFirstComponent(props){
+function MySecondComponent(props){
     const [counterValue, setCounterValue] = useState(props.counter)
     const [firstName, setFirstName] = useState("Loading...")
 
@@ -31,7 +31,7 @@ function MyFirstComponent(props){
             <br/>
             <input type="button" onClick={increment} value="Increment"></input><br/>
             <input type="button" onClick={decrement} value="Decrement"></input><br/>
-            From myfirstcomp the coounter vale from props {counterValue}
+            From mySecondcomp the coounter vale from props {counterValue}
         </div>
     )
 }
@@ -78,4 +78,4 @@ function MyFirstComponent(props){
 //     }
 // }
 
-export default MyFirstComponent;
+export default MySecondComponent;
