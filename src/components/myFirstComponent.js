@@ -28,6 +28,7 @@ function MyFirstComponent(props){
         <div style={myStyle}>
             {/* Hello {firstName}!!! */}
             Hello {firstName}!!!
+            ************my name is {props.name}!!!**********
             <br/>
             <input type="button" onClick={increment} value="Increment"></input><br/>
             <input type="button" onClick={decrement} value="Decrement"></input><br/>
