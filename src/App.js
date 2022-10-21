@@ -2,6 +2,8 @@ import React, { Component, useState } from 'react';
 import { Link } from 'react-router-dom';
 import MyFirstComponent from './components/myFirstComponent';
 import './App.css';
+import { useSelector, useDispatch } from 'react-redux'
+import { decrement, increment } from './storeSlice/counterSlice'
 
 // class App extends Component {
 //   constructor(){
@@ -30,6 +32,10 @@ import './App.css';
 
 function App(props){
   let username = "Javascript"
+  
+  const cartCount = useSelector(state => state.counter.itemCount)
+  const dispatch = useDispatch()
+
   const [counter, setCounter] = useState(0)
   const [jobStatus, setJobStatus] = useState("initiated") 
   const [employeeList,setEmployeeList] = useState([{
@@ -54,6 +60,16 @@ function App(props){
   }])
   const handleDelete = (event) => {
     console.log(event.target.dataset.id)
+    dispatch(decrement())
+    // setEmployeeList(employeeList.filter((employee) => {
+    //   if(employee.id != event.target.dataset.id)
+    //   return employee;
+    // }))
+  }
+
+  const handleAdd = (event) => {
+    console.log(event.target.dataset.id)
+    dispatch(increment())
     // setEmployeeList(employeeList.filter((employee) => {
     //   if(employee.id != event.target.dataset.id)
     //   return employee;
@@ -63,6 +79,8 @@ function App(props){
     <div>
       <div className="App">
         ------------------id : {props.id}
+
+        CART =========================> {cartCount}
         <MyFirstComponent name={props.name} uname={"User"} counter={counter}/>
         <div>
           {/* From App comp Counter: {setCounter(counter+1)} */}
@@ -87,7 +105,7 @@ function App(props){
                   <td>{employee.name}</td>
                   <td>{employee.dept}</td>
                   <td>
-                    <button data-id={employee.id} >Add</button>
+                    <button data-id={employee.id} onClick={handleAdd}>Add</button>
                     <button data-id={employee.id} onClick={handleDelete}>Delete</button>
                   </td>
                 </tr>
